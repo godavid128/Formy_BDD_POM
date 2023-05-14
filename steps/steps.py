@@ -1,3 +1,5 @@
+import time
+
 from behave import given, then, when
 
 from pages.home_page import HomePage
@@ -8,7 +10,6 @@ def step_impl(context):
     print(u'STEP: When Logo is displayed')
     page = HomePage(context.driver)
     assert page.get_logo()
-
 
 @given(u'Go to the form page')
 def step_impl(context):

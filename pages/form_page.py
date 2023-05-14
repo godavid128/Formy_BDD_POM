@@ -1,12 +1,9 @@
 from locators.form_page_locators import FormPageLocators
-from locators.success_page_locator import SuccessPageLocators
-from pages.base_page import BasePage
+from locators.success_page_locators import SuccessPageLocators
+from pages.home_page import HomePage
 
 
-class FormPage(BasePage):
-
-    def open(self):
-        self.driver.get(self.URL)
+class FormPage(HomePage):
 
     def get_first_name_filed(self):
         return self.driver.find_element(*FormPageLocators.FIRST_NAME).is_displayed()
